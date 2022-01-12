@@ -1,197 +1,196 @@
 [
-    {
-        "id": 22,
-        "created_at": "2021-12-30 17:53:45",
-        "currency":"DKK",
-        "amount": 25000,
-        "status": "refunded",
-        "status_formatted": "Refunded. The charge has been refunded to the client",
-        "status_short_formatted": "Refunded",
-        "client": {
-            "id": 4462,
-            "name": "random client"
-        },
-        "invoice": {
-            "id": 299,
-            "number": 85,
-            "clientname": "random client"
-        }
+  {
+    "id": 22,
+    "created_at": "2021-12-30 17:53:45",
+    "currency": "DKK",
+    "amount": 25000,
+    "status": "refunded",
+    "status_formatted": "Refunded. The charge has been refunded to the client",
+    "status_short_formatted": "Refunded",
+    "client": {
+      "id": 4462,
+      "name": "random client"
     },
-    {
-        "id": 21,
-        "created_at": "2021-12-30 15:53:45",
-        "currency": "DKK",
-        "amount": 15000,
-        "status": "charged",
-        "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
-        "status_short_formatted": "Charged",
-        "client": {
-            "id": 4452,
-            "name": "testing name"
-        },
-        "invoice": {
-            "id": 298,
-            "number": 84,
-            "clientname": "testing name"
-        }
-    },
-    {
-        "id": 20,
-        "created_at": "2021-12-30 15:51:17",
-        "currency": "DKK",
-        "amount": 25000,
-        "status": "charged",
-        "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
-        "status_short_formatted": "Charged",
-        "client": {
-            "id": 4462,
-            "name": "Testing new client"
-        },
-        "invoice": {
-            "id": 297,
-            "number": 83,
-            "clientname": "Testing new client"
-        }
-    },
-    {
-        "id": 19,
-        "created_at": "2021-12-30 13:31:07",
-        "currency": "DKK",
-        "amount": 99500,
-        "status": "charged",
-        "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
-        "status_short_formatted": "Charged",
-        "client": {
-            "id": 1,
-            "name": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
-        },
-        "invoice": {
-            "id": 296,
-            "number": 82,
-            "clientname": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
-        }
-    },
-    {
-        "id": 18,
-        "created_at": "2021-11-29 14:53:38",
-        "currency": "DKK",
-        "amount": 20000,
-        "status": "refunded",
-        "status_formatted": "Refunded. The charge has been refunded to the client",
-        "status_short_formatted": "Refunded",
-        "client": {
-            "id": 4460,
-            "name": "Arunas Skirius"
-        },
-        "invoice": null
-    },
-    {
-        "id": 14,
-        "created_at": "2021-11-11 18:03:05",
-        "currency": "DKK",
-        "amount": 23217,
-        "status": "failed",
-        "status_formatted": "Charged failed.",
-        "status_short_formatted": "Failed",
-        "client": {
-            "id": 4448,
-            "name": "testing client"
-        },
-        "invoice": {
-            "id": 288,
-            "number": 78,
-            "clientname": "testing client"
-        }
-    },
-    {
-        "id": 13,
-        "created_at": "2021-11-11 17:58:59",
-        "currency": "DKK",
-        "amount": 23216,
-        "status": "charged",
-        "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
-        "status_short_formatted": "Charged",
-        "client": {
-            "id": 1,
-            "name": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
-        },
-        "invoice": {
-            "id": 287,
-            "number": 77,
-            "clientname": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
-        }
-    },
-    {
-        "id": 12,
-        "created_at": "2021-11-11 17:58:55",
-        "currency": "DKK",
-        "amount": 23216,
-        "status": "paid",
-        "status_formatted": "Payment has been transferred to your bank account.",
-        "status_short_formatted": "Paid",
-        "client": {
-            "id": 1,
-            "name": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
-        },
-        "invoice": {
-            "id": 286,
-            "number": 76,
-            "clientname": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
-        }
-    },
-    {
-        "id": 11,
-        "created_at": "2021-11-11 17:57:11",
-        "currency": "DKK",
-        "amount": 23217,
-        "status": "charged",
-        "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
-        "status_short_formatted": "Charged",
-        "client": {
-            "id": 1,
-            "name": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
-        },
-        "invoice": {
-            "id": 285,
-            "number": 75,
-            "clientname": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
-        }
-    },
-    {
-        "id": 10,
-        "created_at": "2021-11-11 17:09:53",
-        "currency": "DKK",
-        "amount": 34825,
-        "status": "charged",
-        "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
-        "status_short_formatted": "Charged",
-        "client": {
-            "id": 3830,
-            "name": "sdfgsdfg"
-        },
-        "invoice": {
-            "id": 283,
-            "number": 73,
-            "clientname": "sdfgsdfg"
-        }
-    },
-    {
-        "id": 9,
-        "created_at": "2021-11-11 17:08:34",
-        "currency": "DKK",
-        "amount": 34825,
-        "status": "paid",
-        "status_formatted": "Payment has been transferred to your bank account.",
-        "status_short_formatted": "Paid",
-        "client": {
-            "id": 3830,
-            "name": "sdfgsdfg"
-        },
-        "invoice": {
-            "id": 282,
-            "number": 72,
-            "clientname": "sdfgsdfg"
-        }
+    "invoice": {
+      "id": 299,
+      "number": 85,
+      "clientname": "random client"
     }
+  },
+  {
+    "id": 21,
+    "created_at": "2021-12-30 15:53:45",
+    "currency": "DKK",
+    "amount": 15000,
+    "status": "charged",
+    "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
+    "status_short_formatted": "Charged",
+    "client": {
+      "id": 4452,
+      "name": "testing name"
+    },
+    "invoice": {
+      "id": 298,
+      "number": 84,
+      "clientname": "testing name"
+    }
+  },
+  {
+    "id": 20,
+    "created_at": "2021-12-30 15:51:17",
+    "currency": "DKK",
+    "amount": 25000,
+    "status": "charged",
+    "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
+    "status_short_formatted": "Charged",
+    "client": {
+      "id": 4462,
+      "name": "Testing new client"
+    },
+    "invoice": {
+      "id": 297,
+      "number": 83,
+      "clientname": "Testing new client"
+    }
+  },
+  {
+    "id": 19,
+    "created_at": "2021-12-30 13:31:07",
+    "currency": "DKK",
+    "amount": 99500,
+    "status": "charged",
+    "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
+    "status_short_formatted": "Charged",
+    "client": {
+      "id": 1,
+      "name": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
+    },
+    "invoice": {
+      "id": 296,
+      "number": 82,
+      "clientname": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
+    }
+  },
+  {
+    "id": 18,
+    "created_at": "2021-11-29 14:53:38",
+    "currency": "DKK",
+    "amount": 20000,
+    "status": "refunded",
+    "status_formatted": "Refunded. The charge has been refunded to the client",
+    "status_short_formatted": "Refunded",
+    "client": {
+      "id": 4460,
+      "name": "Arunas Skirius"
+    },
+    "invoice": null
+  },
+  {
+    "id": 14,
+    "created_at": "2021-11-11 18:03:05",
+    "currency": "DKK",
+    "amount": 23217,
+    "status": "failed",
+    "status_formatted": "Charged failed.",
+    "status_short_formatted": "Failed",
+    "client": {
+      "id": 4448,
+      "name": "testing client"
+    },
+    "invoice": {
+      "id": 288,
+      "number": 78,
+      "clientname": "testing client"
+    }
+  },
+  {
+    "id": 13,
+    "created_at": "2021-11-11 17:58:59",
+    "currency": "DKK",
+    "amount": 23216,
+    "status": "charged",
+    "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
+    "status_short_formatted": "Charged",
+    "client": {
+      "id": 1,
+      "name": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
+    },
+    "invoice": {
+      "id": 287,
+      "number": 77,
+      "clientname": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
+    }
+  },
+  {
+    "id": 12,
+    "created_at": "2021-11-11 17:58:55",
+    "currency": "DKK",
+    "amount": 23216,
+    "status": "paid",
+    "status_formatted": "Payment has been transferred to your bank account.",
+    "status_short_formatted": "Paid",
+    "client": {
+      "id": 1,
+      "name": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
+    },
+    "invoice": {
+      "id": 286,
+      "number": 76,
+      "clientname": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
+    }
+  },
+  {
+    "id": 11,
+    "created_at": "2021-11-11 17:57:11",
+    "currency": "DKK",
+    "amount": 23217,
+    "status": "charged",
+    "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
+    "status_short_formatted": "Charged",
+    "client": {
+      "id": 1,
+      "name": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
+    },
+    "invoice": {
+      "id": 285,
+      "number": 75,
+      "clientname": "Agathe Christensen Elkjær-Thøgersen (Test klient)"
+    }
+  },
+  {
+    "id": 10,
+    "created_at": "2021-11-11 17:09:53",
+    "currency": "DKK",
+    "amount": 34825,
+    "status": "charged",
+    "status_formatted": "Charged from payment card. Awaiting transfer to your bank account.",
+    "status_short_formatted": "Charged",
+    "client": {
+      "id": 3830,
+      "name": "sdfgsdfg"
+    },
+    "invoice": {
+      "id": 283,
+      "number": 73,
+      "clientname": "sdfgsdfg"
+    }
+  },
+  {
+    "id": 9,
+    "created_at": "2021-11-11 17:08:34",
+    "currency": "DKK",
+    "amount": 34825,
+    "status": "paid",
+    "status_formatted": "Payment has been transferred to your bank account.",
+    "status_short_formatted": "Paid",
+    "client": {
+      "id": 3830,
+      "name": "sdfgsdfg"
+    },
+    "invoice": {
+      "id": 282,
+      "number": 72,
+      "clientname": "sdfgsdfg"
+    }
+  }
 ]
-

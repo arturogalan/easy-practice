@@ -3,5 +3,4 @@ describe('Main', () => {
     cy.visit('/')
     cy.contains('div', 'EasyPay')
   })
-
 })

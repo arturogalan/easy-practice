@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
-import router from "./router/index"
+import router from './router/index'
 import { createI18n } from 'vue-i18n'
 import { pinia } from './store'
 
@@ -27,63 +27,73 @@ const messages = {
       statsHeader: {
         account: {
           title: 'Account',
-          description: 'Amount has not been transferred to your bank account yet.'
+          description:
+            'Amount has not been transferred to your bank account yet.',
         },
         onlinePaymentCount: {
           title: 'Online payment count',
-          description: 'Total amount of online payments you have received via EasyPay.'
+          description:
+            'Total amount of online payments you have received via EasyPay.',
         },
         futurePayments: {
           title: 'Future Payments',
-          description: 'Amount that will be charged in the future via EasyPay.'
-        }                
+          description: 'Amount that will be charged in the future via EasyPay.',
+        },
       },
       paymentsTable: {
         payments: 'payments',
         search: 'Search',
-      }
+      },
     },
     baseComponents: {
       baseTable: {
-        showPagination: 'Showing {startRowNumber} - {endRowNumber} of {totalRowsNumber} {concept}',
+        showPagination:
+          'Showing {startRowNumber} - {endRowNumber} of {totalRowsNumber} {concept}',
         selectPagintacionSize: 'Show {pageSize} {concept} per page',
-        noResults: 'There are no results'
+        noResults: 'There are no results',
       },
       baseFooter: {
         yearAndBrand: '{currentYear} EasyPractice',
         contactMail: 'kontact@terapeutbooking.dk',
-      }
-    }
+      },
+    },
   },
 }
 
 const numberFormats = {
-  'en': {
+  en: {
     integer: {
-      style: 'decimal', useGrouping: true, minimumFractionDigits: 0, maximumFractionDigits: 0, locale: 'de',
+      style: 'decimal',
+      useGrouping: true,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+      locale: 'de',
     },
     currency: {
-      style: "currency",
-      currency: "DKK",
-      locale: "de-DE",
+      style: 'currency',
+      currency: 'DKK',
+      locale: 'de-DE',
       // style: 'currency', currency: "DKK", useGrouping: false, minimumFractionDigits: 2, maximumFractionDigits: 2, locale: 'de',
     },
     decimalNG: {
-      style: 'decimal', useGrouping: false, minimumFractionDigits: 2, maximumFractionDigits: 2,
+      style: 'decimal',
+      useGrouping: false,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
     },
   },
-};
+}
 const datetimeFormats = {
   short: {
     year: 'numeric',
     month: 'short',
-    day: 'numeric'
+    day: 'numeric',
   },
-  'en': {
+  en: {
     short: {
       year: 'numeric',
       month: 'short',
-      day: 'numeric'
+      day: 'numeric',
     },
     long: {
       day: 'numeric',
@@ -92,7 +102,7 @@ const datetimeFormats = {
       hour: 'numeric',
       minute: 'numeric',
       hour12: false,
-      locale: "de-DE",
+      locale: 'de-DE',
     },
   },
 }

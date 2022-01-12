@@ -1,16 +1,11 @@
 module.exports = {
-  content: [
-    './src/**/*.html',
-    './src/**/*.vue',
-    './src/**/*.jsx',
-  ],
+  content: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
   darkMode: 'class',
   theme: {
     minHeight: {
       '1/3': '65vh',
     },
-    extend: {
-    },
+    extend: {},
   },
   variants: {
     extend: {},

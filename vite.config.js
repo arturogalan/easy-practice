@@ -8,8 +8,8 @@ export default defineConfig({
     vue(),
     ViteFonts({
       google: {
-        families: ['Nunito']
+        families: ['Nunito'],
       },
-    })    
-  ]
+    }),
+  ],
 })
