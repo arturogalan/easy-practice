@@ -7,9 +7,9 @@ export default {
       currentYear: new Intl.DateTimeFormat('da-DK', {
         year: 'numeric',
       }).format(new Date()),
-    }
+    };
   },
-}
+};
 </script>
 <template>
   <footer

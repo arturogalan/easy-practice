@@ -21,9 +21,9 @@ export default {
           description: 'easyPayView.statsHeader.futurePayments.description',
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 <template>
   <section>

@@ -9,7 +9,7 @@ export const ROUTES = {
   EASYPAYVIEW: 'easyPayView',
   SETTINGSVIEW: 'settingsView',
   APPSVIEW: 'appsView',
-}
+};
 
 export const ROUTES_DESCRIPTOR = [
   { name: ROUTES.CALENDARVIEW, icon: 'calendar' },
@@ -22,4 +22,4 @@ export const ROUTES_DESCRIPTOR = [
   { name: ROUTES.EASYPAYVIEW, icon: 'card' },
   { name: ROUTES.SETTINGSVIEW, icon: 'settings' },
   { name: ROUTES.APPSVIEW, icon: 'apps' },
-]
+];

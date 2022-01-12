@@ -16,14 +16,14 @@ export default {
         { name: 'settingsView', icon: 'settings' },
         { name: 'appsView', icon: 'apps' },
       ],
-    }
+    };
   },
   methods: {
     isSelected(viewName) {
-      return this.$route.name === viewName
+      return this.$route.name === viewName;
     },
   },
-}
+};
 </script>
 <template>
   <header class="pt-4 bg-white text-gray-700 text-center mx-5">

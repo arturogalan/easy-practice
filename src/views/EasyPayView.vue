@@ -1,7 +1,7 @@
 <script>
-import BaseCarousel from '@/components/BaseCarousel.vue'
-import BaseTable from '@/components/BaseTable.vue'
-import testData from '@/assets/test_data.json'
+import BaseCarousel from '@/components/BaseCarousel.vue';
+import BaseTable from '@/components/BaseTable.vue';
+import testData from '@/assets/test_data.json';
 
 export default {
   name: 'easy-pay-view',
@@ -20,13 +20,13 @@ export default {
       rows: [],
       selectedStatusFilter: 'all',
       selectedTextFilter: '',
-    }
+    };
   },
   mounted() {
     this.rows = testData.map((el) => {
       const formattedAmount = new Intl.NumberFormat('da-DK', {
         minimumFractionDigits: 2,
-      }).format(el.amount / 100)
+      }).format(el.amount / 100);
       const formattedCreatedAt = new Intl.DateTimeFormat('da-DK', {
         day: 'numeric',
         year: 'numeric',
@@ -34,32 +34,32 @@ export default {
         hour: 'numeric',
         minute: 'numeric',
         hour12: false,
-      }).format(new Date(el.created_at))
+      }).format(new Date(el.created_at));
 
       return {
         ...el,
         client_name: el.client.name,
         formatted_created_at: formattedCreatedAt,
         formatted_amount: `${el.currency} ${formattedAmount}`,
-      }
-    })
+      };
+    });
   },
   computed: {
     filteredRows() {
       const filterByStatusFunction = {
         all: () => {
-          return true
+          return true;
         },
         ongoing: (el) => {
-          return !['failed', 'paid'].includes(el.status)
+          return !['failed', 'paid'].includes(el.status);
         },
         charged: (el) => {
-          return el.status === 'charged'
+          return el.status === 'charged';
         },
         refunded: (el) => {
-          return el.status === 'refunded'
+          return el.status === 'refunded';
         },
-      }[this.selectedStatusFilter]
+      }[this.selectedStatusFilter];
 
       const filterByTextFunction = (el) => {
         return (
@@ -67,28 +67,28 @@ export default {
           el.client.name
             .toLowerCase()
             .indexOf(this.selectedTextFilter.toLowerCase()) !== -1
-        )
-      }
+        );
+      };
 
       const searchRegExp = this.selectedTextFilter
         ? new RegExp(this.selectedTextFilter, 'gi')
-        : null
+        : null;
 
       return this.rows
         .filter(filterByStatusFunction)
         .filter(filterByTextFunction)
         .map((el) => {
-          const immutable = { ...el }
+          const immutable = { ...el };
           if (searchRegExp) {
             immutable.client_name = el.client_name.replace(
               searchRegExp,
               (match) => `<mark>${match}</mark>`,
-            )
+            );
           } else {
-            immutable.client_name = el.client.name
+            immutable.client_name = el.client.name;
           }
-          return immutable
-        })
+          return immutable;
+        });
     },
   },
   methods: {
@@ -98,11 +98,11 @@ export default {
         refunded: 'bg-neutral-400',
         paid: 'bg-sky-600',
         failed: 'bg-rose-500',
-      }
-      return statusColorMap[status]
+      };
+      return statusColorMap[status];
     },
   },
-}
+};
 </script>
 
 <template>

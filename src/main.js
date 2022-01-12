@@ -1,8 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './index.css'
-import router from './router/index'
-import { createI18n } from 'vue-i18n'
+import { createApp } from 'vue';
+import App from './App.vue';
+import './index.css';
+import router from './router/index';
+import { createI18n } from 'vue-i18n';
 
 // 1. Ready translated locale messages
 // The structure of the locale message is the hierarchical object structure with each locale as the top property
@@ -57,7 +57,7 @@ const messages = {
       },
     },
   },
-}
+};
 
 const numberFormats = {
   en: {
@@ -81,7 +81,7 @@ const numberFormats = {
       maximumFractionDigits: 2,
     },
   },
-}
+};
 const datetimeFormats = {
   short: {
     year: 'numeric',
@@ -104,7 +104,7 @@ const datetimeFormats = {
       locale: 'de-DE',
     },
   },
-}
+};
 // 2. Create i18n instance with options
 const i18n = createI18n({
   locale: 'en', // set locale
@@ -112,8 +112,8 @@ const i18n = createI18n({
   messages, // set locale messages
   numberFormats,
   datetimeFormats,
-})
+});
 
-const app = createApp(App).use(router)
-app.use(i18n)
-app.mount('#app')
+const app = createApp(App).use(router);
+app.use(i18n);
+app.mount('#app');

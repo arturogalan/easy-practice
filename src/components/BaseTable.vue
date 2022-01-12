@@ -1,7 +1,7 @@
 <script>
-const pageSize = 10
-const maxPagesNumber = 4
-const pagesSizes = [10, 25, 50, 100]
+const pageSize = 10;
+const maxPagesNumber = 4;
+const pagesSizes = [10, 25, 50, 100];
 export default {
   name: 'base-table',
   props: {
@@ -32,7 +32,7 @@ export default {
     statusColorMapper: {
       type: Function,
       default: () => {
-        return 'bg-sky-500'
+        return 'bg-sky-500';
       },
     },
   },
@@ -42,7 +42,7 @@ export default {
       pageSize: pageSize,
       currentPage: 1,
       selectedPageSize: 10,
-    }
+    };
   },
   computed: {
     // The minimun between: The rows page numbers or maxPagesNumber
@@ -50,38 +50,38 @@ export default {
       return Math.min(
         Math.ceil(this.rows.length / this.selectedPageSize),
         maxPagesNumber,
-      )
+      );
     },
     startRowNumber() {
-      return (this.currentPage - 1) * this.selectedPageSize
+      return (this.currentPage - 1) * this.selectedPageSize;
     },
     endRowNumber() {
-      return this.currentPage * this.selectedPageSize
+      return this.currentPage * this.selectedPageSize;
     },
     visibleRows() {
-      return this.rows.slice(this.startRowNumber, this.endRowNumber)
+      return this.rows.slice(this.startRowNumber, this.endRowNumber);
     },
   },
   methods: {
     selectPage(selectedPage) {
-      this.currentPage = selectedPage
+      this.currentPage = selectedPage;
     },
     decreasePage() {
-      this.currentPage = Math.max(1, this.currentPage - 1)
+      this.currentPage = Math.max(1, this.currentPage - 1);
     },
     increasePage() {
-      this.currentPage = Math.min(this.pagesNumber, this.currentPage + 1)
+      this.currentPage = Math.min(this.pagesNumber, this.currentPage + 1);
     },
   },
   watch: {
     rows(newValue, oldValue) {
-      this.currentPage = 1
+      this.currentPage = 1;
     },
     selectedPageSize(newValue, oldValue) {
-      this.currentPage = 1
+      this.currentPage = 1;
     },
   },
-}
+};
 </script>
 <template>
   <div class="min-h-1/3 flex flex-col justify-between" :class="$attrs.class">
