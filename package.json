@@ -1,6 +1,7 @@
 {
   "name": "easy-practice-challenge",
   "version": "0.0.0",
+  "author": "Arturo Galan <arturo.galan@gmail.com>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

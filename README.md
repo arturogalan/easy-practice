@@ -11,7 +11,7 @@ A payment management example project, deployed in netlify:
  - `npm run dev`
 
 
-## Assumed things
+## Decisions taken and other notes
 - The navbar at the top has a min-width to just maintain the look, if the page is going to be responsive in mobiles etc a more precise styling should be done (with tailwind selectors md: sm: etc to collapse menu in smaller screens with media queries, together with the design of the collapsed menu)
 - Didn't see the other color for payments statuses in the example, so selected a darker blue for Paid and red for Failed ones
 - The dates months are not capitalized cause is the standard format retrieved by Intl.DateTimeFormat('da-DK'). If we want them capitalized a more customized format of the date should be done
@@ -19,8 +19,8 @@ A payment management example project, deployed in netlify:
 - Just imported the JSON in the vue component for testing purposes, a state management and API layer should be added when calling to real endpoints.
 
 ## Testing
-- Unit testing: command `npm run test:unit`. For unit testing I've choosen Vue test utils https://next.vue-test-utils.vuejs.org/, a library to easily test Vue components and Jest as the runner for this tests. I've made an example test for BaseCard.vue, you can see that I test the existence of props, non-existent props and slots behavior. The evolution will be to test some css classes if we want to ensure they are present, or other behaviors. For other complex components/views we can also mock the store-management methods by symply adding methods to the mocks section when mounting the wrapper in the tests. Next step will be also to connect the execution to a ci to see the coverage of the code and stablish a coverage minimum for all the app, currently you can see it the report in text format when running `npm run test:unit`
-- End-to-end testing: command `npm run test:e2e`. For e2e testing I selected Cypress, it allows you to test elements in the screen, you can search for content as a result of some endpoint call (I test the presence of 'Bitcoin' row in the cryptos table), you can test navigation (I test the navigation to a currency detail) etc... It also make an screenshot when it fails (for instance, you can simply edit the second test Bitcoin word to Batcoin an run `npm run test:e2e` to see the failure snapshot under the cypress/screenshots folder). The evolution of this e2e maybe require them to be in a separated project as they depend on internet (api calls) and can take some time to be executed. This test should also be executed daily decoupled from webapp releases/deploys to ensure that the app is working correctly.
+- Unit testing: command `npm run test:unit`. For unit testing I've choosen Vue test utils https://next.vue-test-utils.vuejs.org/, a library to easily test Vue components and Jest as the runner for this tests. I've made an example test for TableBase.vue, you can see that I test the existence of rows and pagination fields. Next step will be also to connect the execution to a ci to see the coverage of the code and stablish a coverage minimum for all the app, currently you can see it the report in text format when running `npm run test:unit`
+- End-to-end testing: command `npm run test:e2e`. For e2e testing I selected Cypress, it allows you to test elements in the screen, you can search for content as a result of some endpoint call, you can test navigationetc... It also make an screenshot when it fails.
 
 
 ## Project structure
