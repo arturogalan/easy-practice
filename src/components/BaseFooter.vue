@@ -19,7 +19,7 @@ export default {
       <p>
         {{
           $t('baseComponents.baseFooter.yearAndBrand', {
-            currentYear: `${currentYear} @`,
+            currentYear: `${currentYear}`,
           })
         }}
       </p>

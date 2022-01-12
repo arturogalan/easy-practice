@@ -53,8 +53,8 @@ const messages = {
         noResults: 'There are no results',
       },
       baseFooter: {
-        yearAndBrand: '{currentYear} EasyPractice',
-        contactMail: 'kontact@terapeutbooking.dk',
+        yearAndBrand: "{currentYear} {'@'} EasyPractice",
+        contactMail: "kontact{'@'}terapeutbooking.dk",
       },
     },
   },
