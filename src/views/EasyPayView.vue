@@ -76,7 +76,7 @@ export default {
     <div class="w-auto mx-8 my-2 flex justify-between">
       <select
         name="select"
-        class="py-2 indent-4 rounded-md pr-10 cursor-pointer"
+        class="w-2/12 py-2 indent-4 rounded-md cursor-pointer"
         v-model="selectedStatusFilter"
       >
         <option value="all">All</option>

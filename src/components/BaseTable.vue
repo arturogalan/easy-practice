@@ -80,6 +80,8 @@
 </script>
 <template>
   <div class="min-h-1/3 flex flex-col justify-between" :class="$attrs.class">
+  <div class="mt-20" v-if="!visibleRows.length">{{ $t('baseComponents.baseTable.noResults')}}</div>
+  <div v-else>
     <div 
      v-for="(row, rowIndex) in visibleRows"
      :key="`row-${rowIndex}`"
@@ -93,13 +95,13 @@
           v-for="(column, columnIndex) in columns"
           :key="`column-${columnIndex}`"
           class="pl-5 py-4 whitespace-nowrap text-ellipsis overflow-hidden"
-          :class="columnIndex === 0 ? 'text-black' : 'text-gray-400'"
+          :class="columnIndex === 0 ? 'text-black' : 'text-gray-500'"
         >
           {{row[column]}}
         </div>
       </div>
     </div>
-
+</div>
     <div class="w-auto mx-8 my-2 flex justify-between">
       <section class="grid grid-2 gap-2 grid-flow-col">
        <div
@@ -126,7 +128,6 @@
        </div>
 
       <select
-        name="select"
         class="py-2 px-4 rounded-md pr-10 cursor-pointer"
         v-model="selectedPageSize"
       >

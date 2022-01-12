@@ -46,7 +46,12 @@ const messages = {
     baseComponents: {
       baseTable: {
         showPagination: 'Showing {startRowNumber} - {endRowNumber} of {totalRowsNumber} {concept}',
-        selectPagintacionSize: 'Show {pageSize} {concept} per page'
+        selectPagintacionSize: 'Show {pageSize} {concept} per page',
+        noResults: 'There are no results'
+      },
+      baseFooter: {
+        yearAndBrand: '{currentYear} EasyPractice',
+        contactMail: 'kontact@terapeutbooking.dk',
       }
     }
   },
