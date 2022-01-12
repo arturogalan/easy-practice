@@ -47,10 +47,24 @@ export default {
         "charged": (el)=> {return el.status === 'charged'},
         "refunded": (el)=> {return el.status === 'refunded'},
       }[this.selectedStatusFilter]
+      
       const filterByTextFunction = (el)=>{
         return !this.selectedTextFilter || el.client.name.toLowerCase().indexOf(this.selectedTextFilter.toLowerCase()) !== -1
       }
-      return this.rows.filter(filterByStatusFunction).filter(filterByTextFunction);
+
+      const searchRegExp = this.selectedTextFilter ? new RegExp(this.selectedTextFilter, 'gi') : null;
+
+      return this.rows
+        .filter(filterByStatusFunction).filter(filterByTextFunction)
+        .map((el)=> {
+          const immutable = {...el};
+          if (searchRegExp) {
+            immutable.client_name = el.client_name.replace(searchRegExp, (match)=> `<mark>${match}</mark>`);
+          } else {
+            immutable.client_name = el.client.name;
+          }
+          return immutable
+        });
     }
   },
   methods: {
