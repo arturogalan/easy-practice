@@ -104,6 +104,7 @@ export default {
             :key="`column-${columnIndex}`"
             class="pl-5 py-4 whitespace-nowrap text-ellipsis overflow-hidden"
             :class="columnIndex === 0 ? 'text-black' : 'text-gray-500'"
+            :title="row[column]"
             v-html="row[column]"
           ></div>
         </div>
