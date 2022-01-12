@@ -1,7 +1,7 @@
 <script>
-import BaseCarousel from '../components/BaseCarousel.vue'
-import BaseTable from '../components/BaseTable.vue'
-import testData from '../assets/test_data.json'
+import BaseCarousel from '@/components/BaseCarousel.vue'
+import BaseTable from '@/components/BaseTable.vue'
+import testData from '@/assets/test_data.json'
 
 export default {
   name: 'easy-pay-view',

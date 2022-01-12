@@ -3,7 +3,6 @@ import App from './App.vue'
 import './index.css'
 import router from './router/index'
 import { createI18n } from 'vue-i18n'
-import { pinia } from './store'
 
 // 1. Ready translated locale messages
 // The structure of the locale message is the hierarchical object structure with each locale as the top property
@@ -115,6 +114,6 @@ const i18n = createI18n({
   datetimeFormats,
 })
 
-const app = createApp(App).use(pinia).use(router)
+const app = createApp(App).use(router)
 app.use(i18n)
 app.mount('#app')

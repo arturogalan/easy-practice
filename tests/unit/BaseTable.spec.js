@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils'
 import BaseTable from '../../src/components/BaseTable.vue'
 const MOCKS = {
+  // Print the key and the params to be able to test them
   $t: (key, params) => `key: ${key} params: {${Object.entries(params)}}`,
   $n: (number) => number,
 }
@@ -37,7 +38,7 @@ describe('BaseTable.vue component', () => {
       '{startRowNumber,1,endRowNumber,5,totalRowsNumber,5,concept,CONCEPT}',
     )
   })
-  it('it renders the pagination key and has the rows numbers', () => {
+  it('it renders the pagination key together with the calculated rows numbers', () => {
     const wrapper = mount(BaseTable, {
       props: {
         columns: ['col1', 'col2'],

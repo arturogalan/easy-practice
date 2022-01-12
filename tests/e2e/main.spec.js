@@ -1,5 +1,5 @@
 describe('Main', () => {
-  it('should display header text and a table', () => {
+  it('should display the easypay title', () => {
     cy.visit('/')
     cy.contains('div', 'EasyPay')
   })
